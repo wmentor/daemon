@@ -25,7 +25,8 @@ import (
 
 func main() {
 
-	if err := daemon.Run("pid=/var/run/main.pid dir=/home/user log=/var/log/myapp/myapp.log"); err != nil {
+	config := "pid=/var/run/main.pid dir=/dir log=/var/log/myapp.log"
+	if err := daemon.Run(config); err != nil {
 		panic("daemon didn't run")
 	}
 
