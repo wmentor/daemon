@@ -36,4 +36,22 @@ func main() {
 
 You must call daemon.Run before exclusive usage of resources (bind ports, open files for write).
 
-Any of the parameters (pid, log, dir) can be deleted.
+Any of the parameters (pid, log, dir) can be deleted from dsn string.
+
+```go
+package main
+
+import (
+  "github.com/wmentor/daemon"
+)
+
+func main() {
+
+  // no pid and no log
+	if err := daemon.Run(""); err != nil {
+		panic("daemon didn't run")
+	}
+
+	// your code 
+}
+```
