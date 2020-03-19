@@ -25,12 +25,12 @@ import (
 
 func main() {
 
-	config := "pid=/var/run/main.pid dir=/dir log=/var/log/myapp.log"
-	if err := daemon.Run(config); err != nil {
-		panic("daemon didn't run")
-	}
+  config := "pid=/var/run/main.pid dir=/dir log=/var/log/myapp.log"
+  if err := daemon.Run(config); err != nil {
+    panic("daemon didn't run")
+  }
 
-	// your code 
+  // your code 
 }
 
 ```
@@ -49,10 +49,10 @@ import (
 func main() {
 
   // no pid and no log
-	if err := daemon.Run(""); err != nil {
-		panic("daemon didn't run")
-	}
+  if err := daemon.Run(""); err != nil {
+    panic("daemon didn't run")
+  }
 
-	// your code 
+  // your code 
 }
 ```
